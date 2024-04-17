@@ -3,7 +3,7 @@ function SelectCrypto() {
     
     return (
         <div className='box__input'>
-            <select name="crypto" id="crypto">
+            <select name="crypto" id="crypto" required>
                 <option value="">selecionar ...</option>
                 <option value="BTC">Bitcoin</option>
                 <option value="ETH">Ethereum</option>
