@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"npx turbo dev"
+    "dev":"npx turbo dev",
+    "build":"npx turbo build",
+    "start":"npx turbo start"
   },
   "keywords": [],
   "author": "",
