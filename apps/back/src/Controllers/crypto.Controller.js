@@ -1,4 +1,4 @@
-import { getPriceCoin, getTopCrypto } from "../logic/dataFetch.js"
+import { getPriceCoin, getTopCrypto,getValueCoin } from "../logic/dataFetch.js"
 
 export const getAllCrypto = async (req,res)=>{
     try {
@@ -182,7 +182,17 @@ export const getCoins = async(req,res)=>{
 export const getQuote = async(req,res)=>{
   const {amount,currency} = req.params
   try {
-    console.log(amount,currency)
+    const values = await getValueCoin(currency)
+
+    console.log(values,currency)
+    const data = {
+      ETH: values.ETH * amount,
+      USDT: values.USDT * amount,
+      BNB: values.BNB * amount,
+      BTC: values.BTC * amount
+    }
+    res.json(data)
+
   } catch (error) {
     console.log(error)
   }
@@ -193,7 +203,7 @@ export const getExchangeRate = async(req,res)=>{
     const {amount,currency} = req.params
     try {
             const value =  await getPriceCoin("USD",currency,amount)
-
+            
           res.json(value.result)      
     } catch (error) {
         console.log(error)
