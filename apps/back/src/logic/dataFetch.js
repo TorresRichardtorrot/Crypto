@@ -28,4 +28,12 @@ export const getPriceCoin = async(from,to,amount)=>{
     }
 }
 
-export const getValue
+export const getValueCoin = async(crypto)=>{
+    try {
+        const data = await fetch(`https://min-api.cryptocompare.com/data/price?fsym=${crypto}&tsyms=ETH,USDT,BNB,BTC`)
+        return  await data.json()
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
