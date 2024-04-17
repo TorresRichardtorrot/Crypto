@@ -27,3 +27,5 @@ export const getPriceCoin = async(from,to,amount)=>{
         return null
     }
 }
+
+export const getValue

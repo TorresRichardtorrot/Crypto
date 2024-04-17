@@ -6,7 +6,7 @@
   "scripts": {
     "dev":"npx turbo dev",
     "build":"npx turbo build",
-    "start":"npx turbo start"
+    "start":"node apps/back/src/index.js"
   },
   "keywords": [],
   "author": "",
