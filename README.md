@@ -11,7 +11,7 @@ Ir a la carpeta raiz del proyecto
 PORT=Puerto en el cual se va a ejecutar el servidor
 MONGO_URI=URL para la conexion a la base de datos
 URL_FRON_END=Usada para la configuración de CORS (Solo en desarrollo)
-CURRENCY_APIKEY=Api key del api de Monedas [Octener](https://apilayer.com/marketplace/exchangerates_data-api)
+CURRENCY_APIKEY=Api key del api de Monedas (https://apilayer.com/marketplace/exchangerates_data-api)
 
   ```
   - Para construir el frond ```npm run build```
