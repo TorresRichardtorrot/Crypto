@@ -46,7 +46,6 @@ export const getQuote = async(req,res)=>{
   try {
     const values = await getValueCoin(currency)
     const VES =  await getPriceCoin("USD","VES",1)
-    console.log(VES)
     const data = {
       ETH: values.ETH * amount,
       USDT: values.USDT * amount,
